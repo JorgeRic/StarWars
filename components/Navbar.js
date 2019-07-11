@@ -10,7 +10,6 @@ Navbar.prototype.generate = function(){
   console.log(this.links)
   //generar dinamicamente los elementos
   this.elements = `
-  <header id="portada">
   <img class='logo item' src="https://cdn.worldvectorlogo.com/logos/star-wars-2.svg">
   <nav class='item'>
   <ul>`;
