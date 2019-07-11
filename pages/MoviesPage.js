@@ -34,7 +34,13 @@ MoviesPage.prototype.generate = async function(){
   this.elements +=`
   <article>
     <h3 class="elementos">${movie.name}</h3>
-    <img src = ${imagenes[i]}>
+    <div class="card">
+    <img class="image-card" src = ${imagenes[i]}>
+    <div class="cont">
+    <h4><b>${movie.name}</b></h4> 
+    </div>
+    </div>
+
     <article class="tecnic">
     <h4>Technical details</h4>
     <p>Model: ${movie.model}</p>
@@ -44,6 +50,8 @@ MoviesPage.prototype.generate = async function(){
     </article>
     `;
   })
+
+
   this.elements+= '</section>'
   this.render();
 }

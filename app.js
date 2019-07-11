@@ -5,6 +5,7 @@ function main(){
   var layoutInstance = null;
   var rootElement = document.querySelector('#root');
   var navbarInstance = null;
+  var footerInstance = null;
   var links = [
     {name:'Home',
     url:'/'},
@@ -15,6 +16,7 @@ function main(){
   generateLayout();
   generateNavbar();
   activateRouter();
+  generateFooter();
   addEventListenerToNavbar();
 
   function generateLayout(){
@@ -22,11 +24,15 @@ function main(){
     layoutInstance.generate();
 
   }
-  function generateNavbar(){
-    
+  function generateNavbar(){ 
     navbarInstance = new Navbar(layoutInstance.header, links);
     navbarInstance.generate();
   }
+  function generateFooter(){
+    footerInstance = new Footer(layoutInstance.footer);
+    footerInstance.generate();
+  }
+
   function activateRouter(){
     routerInstance.buildDom(ENTRY_POINT, layoutInstance.main);
   }

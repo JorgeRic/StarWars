@@ -25,14 +25,16 @@ body {
 }
 
 
-h1 {}
+h1 {
+  margin-left: 5px;
+}
 
 h2 {
   padding-left: 20px;
 }
 
 h3 {
-    margin-left: 150px;
+    
 }
 h4 {
     margin-left: 20px;
@@ -51,7 +53,13 @@ align-items: center;
 }
 .foto_inicio{
    flex-shrink: 0;
+   margin-left: 5px;
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
 }
+.foto_inicio:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
 .title{
   color:red;
   font-size:1.8em;
@@ -59,32 +67,27 @@ align-items: center;
 .animacion {
   animation-duration: 3s;
   animation-name: slidein;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
   animation-direction: alternate;
   animation-timing-function: linear;
   animation-delay: 2s;
+  height: 40%;
+  width: 40%;
 }
 
 @keyframes slidein {
   from {
-    margin-left:-10%;
-    width:100%;
-    color:white;
+    margin-left:0%;
+    width:25%;
+  
   }
   
   to {
-   margin-left:10%;
-   width:100%;
-   color: red;
+   margin-left:0%;
+   width:50%;
+  
  }
 }
-
-
-
-
-
-
-
 
 a{
   text-decoration: none;
@@ -92,12 +95,29 @@ a{
   color: white;
   margin-right: 40px;
   font-size: 1.2em;
+  transition: color 2s;
 }
 .link{
   list-style-type: none;
   font-size: 1.8em;
   float: left;
   margin-left: 30px;
+  
+}
+a:hover{
+  color: red;
+  
+
+}
+.ancla-footer{
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-size: 1.2em;
+  transition: color 2s;
+}
+.ancla-footer:hover{
+  color: red;
 }
 .fuerza{
   font-size: 3em;
@@ -109,7 +129,6 @@ a{
   font-weight: 400;
 }
 
-
 /* ---- layout ---- */
 
 #site-header {
@@ -117,6 +136,13 @@ a{
   color: white;
   background: black;
 
+}
+#presentacion{
+  display: flex;
+  justify-content: space-between
+}
+#planeta{
+  order: flex-end;
 }
 #portada{
   display: flex;
@@ -131,24 +157,52 @@ a{
 
 #site-footer {
   color: white;
-  padding: 60px 0;
-  background: #111;
+  justify-content: space-around;
+  align-items: center;
+  background: black;
+  display: flex;
+}
+.title-footer{
+  font-size: 2em;
+  font-family: -webkit-pictograph;
+  color: white;
+  font-style: bold;
+  font-weight: bold;
+  margin-left: 25px;
+  transition: color 2s;
+}
+.title-footer:hover{
+  color:red
 }
 
 #site-main {
   margin-bottom: 60px;
 }
 .tecnic{
-  border: 5px ridge red;
+  border: 2px ridge red;
+  padding: 4px 8px;
+  margin-top: 10px;
+  width: 100%;
+
 }
+
 .container {
   margin: 0 20px;
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
-  grid-column-gap: 50px;
-  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 7%;
+  grid-row-gap: 80px;
   justify-content: center;
+}
+
+
+@media (min-width: 200px)
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 30px;
 }
 .elementos{
   text-decoration: underline;
@@ -160,15 +214,8 @@ a{
   padding-top: 20px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 728px;
-    margin: 0 auto;
-  }
-}
 img{
-  width: 600px;
-  height: 400px;
+width: 100%;
 }
 .dark-baider{
   width: 100%;
@@ -178,6 +225,7 @@ img{
   width: 150px;
   height:100px;
   margin-top: -10px;
+  transform: rotate(-25deg);
 }
 
 
@@ -205,4 +253,37 @@ section.testimonials {
 
 section.testimonials .button {
   margin-bottom: 10px;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+#card2 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+.image-card {
+    position: absolute;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.cont {
+  padding: 4px 8px;
 }
