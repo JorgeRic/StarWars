@@ -10,7 +10,12 @@ function main(){
     {name:'Home',
     url:'/'},
     {name:'Starships',
-    url:'/starships'}
+    url:'/starships'},
+    {name:'Vehicles',
+    url:'/secondpage'},
+    {name:'People',
+    url:'/thirdpage'},
+    
   ];
 
   generateLayout();

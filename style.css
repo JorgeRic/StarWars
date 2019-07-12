@@ -45,13 +45,18 @@ h4 {
 p {
   margin: 0;
   margin-left: 50px;
+  font-size: 1.2em;
 }
 .contenedor{
 display: flex;
 justify-content: flex-start;
 align-items: center;
 flex-direction: column;
+padding-bottom: 25px;
+padding-top: 25px;
+
 }
+
 .foto_inicio{
    flex-shrink: 0;
    margin-left: 5px;
@@ -75,6 +80,7 @@ flex-direction: column;
   animation-delay: 2s;
   height: 40%;
   width: 40%;
+  
 }
 
 @keyframes slidein {
@@ -178,7 +184,9 @@ a:hover{
 }
 
 #site-main {
-  margin-bottom: 60px;
+
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
 }
 .tecnic{
   border: 2px ridge red;
@@ -196,15 +204,12 @@ a:hover{
   grid-column-gap: 7%;
   grid-row-gap: 80px;
   justify-content: center;
-}
-
-.container {
   max-width: 1080px;
   margin: 0 auto;
   width: 100%;
   padding: 30px;
-  
 }
+
 .elementos{
   text-decoration: underline;
   font-size: 1.5em;
@@ -216,7 +221,14 @@ a:hover{
 }
 
 img{
-width: 100%;
+/* width: 100%; */
+}
+
+#card3 img{
+  width: 100%;
+  }
+#card2 img{
+  width: 100%;
 }
 .dark-baider{
   width: 100%;
@@ -233,6 +245,23 @@ width: 100%;
 
 
 /* ---- components ---- */
+
+.btn{
+  
+  border: 5px ridge black;
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  font-size: 1.3em;
+  font-weight: bold;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+}
+.btn:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  border: 5px ridge red;
+  margin-left: 2px;
+}
 
 .button {
   width: 100%;
@@ -288,4 +317,15 @@ width: 100%;
 /* Add some padding inside the card container */
 .cont {
   padding: 4px 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+   grid-template-columns: 1fr;
+  }
+
+}
+.cambio_pantallas{
+  background-image: image("https://logosmarcas.com/wp-content/uploads/2018/05/Star-Wars-Logo.png")
 }

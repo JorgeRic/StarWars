@@ -17,7 +17,6 @@ Layout.prototype.generate = function(){
   `;
   this.render();
   this.getContainers();
-  console.log(this.header)
 }
 
 Layout.prototype.render = function(){

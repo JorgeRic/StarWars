@@ -3,7 +3,9 @@ function Loading(parentElement){
   this.elements = null;
 }
 Loading.prototype.generate = function(){
-  this.elements = `<p class='fuerza'>May the force be with you...</p>
+  this.elements = `
+  <h1>Loading.....</h1>
+  <p class='fuerza'>May the force be with you...</p>
   <img class= 'dark-baider' src='https://holatelcel.com/wp-content/uploads/2015/07/app-star-wars.jpg'>
     `
   this.render();
